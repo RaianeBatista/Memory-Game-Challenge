@@ -11,6 +11,7 @@ body {
 
 .container {
   position: relative;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,16 +25,15 @@ body {
     #ec38bc 70%,
     #fdeff9 100%
   );
-  padding: 40px auto;
+  padding: 30px 60px;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-size: 3rem;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  padding-top: 10px;
 }
 
 .reset {
@@ -42,7 +42,7 @@ h2 {
   color: #000;
   background-color: #fff;
   border: none;
-  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  font-size: 1.5rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -55,20 +55,20 @@ h2 {
 }
 
 .game {
-  width: clamp(300px, 0%, 450px);
-  height: clamp(300px, 0%, 450px);
+  width: 450px;
+  height: 450px;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  padding: 5px;
+  gap: 10px;
+
   transform-style: preserve-3d;
   perspective: 500px;
 }
 
 .item {
   position: relative;
-  width: clamp(65px, 0%, 100px);
-  height: clamp(65px, 0%, 100px);
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,4 +100,26 @@ h2 {
 .boxOpen::after,
 .boxMatch::after {
   transform: rotateY(180deg);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  h2 {
+    font-size: 2.7rem;
+  }
+  .reset {
+    font-size: 1.2rem;
+  }
+
+  .game {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .item {
+    width: 80px;
+    height: 80px;
+  }
 }

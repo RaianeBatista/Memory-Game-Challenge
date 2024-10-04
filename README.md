@@ -9,7 +9,7 @@ Este projeto foi desenvolvido como parte do desafio proposto pela plataforma de 
 O projeto foi construído com as seguintes tecnologias:
 
 - **HTML5**: estrutura semântica do jogo
-- **CSS3**: estilização e layout responsivo
+- **CSS3**: estilização 
 - **JavaScript**: lógica do jogo, manipulação do DOM e interação com o usuário
 
 ## 🎮 Como Jogar
